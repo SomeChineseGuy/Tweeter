@@ -45,12 +45,11 @@ function loadTweets (){
   $.ajax ({
     url: "/tweets",
     method: "GET",
-  }).done(renderTweets)
+  }).done(renderTweets);
 }
 
 
 $(".new-tweet form").on("submit", function(e){
-  console.log("my submit");
   e.preventDefault();
   if (checkValidation($(".new-tweet textarea").val())) {
     let tweetData = ($("form").serialize() );
@@ -58,7 +57,10 @@ $(".new-tweet form").on("submit", function(e){
       url: "/tweets",
       method: "POST",
       data: tweetData
-    }).done(loadTweets)
+    }).done(function(){
+      loadTweets()
+      $(".new-tweet textarea").val("")
+    })
   } else {
     console.log("Not working")
   }

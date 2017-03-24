@@ -2,13 +2,15 @@ $(function(){
 
 
 var maxLength = 140;
-$('textarea').keyup(function(){
+$('textarea').keyup(function() {
    var length = $(this).val().length;
-   length = maxLength-length;
+   length = maxLength - length;
    $('.counter').text(length);
     if (length < 0){
        $('.counter').css('color', 'red');
    }
 });
-
+$(".new-tweet form").submit(function() {
+    $(".counter").text(maxLength) 
+})
 });  
