@@ -13,15 +13,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css"/>
-
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
-     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-
-    <!-- Counter JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <link rel="stylesheet" href="/styles/font-awesome.min.css">
   </head>
 
   <body>
@@ -32,75 +24,25 @@
       <span class="header">Tweeter</span>
     </nav>
 
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="post" action="/tweets/" >
+        <form method="post" action="/tweets" >
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet"/>
           <span class="counter">140</span>
         </form>
       </section>
       <!-- Other users tweet box -->
-      <div class="tweets">
-        <article class="tweet">
-          <header>
-            <img class="avatar" src="https://image.spreadshirtmedia.com/image-server/v1/compositions/1011162160/views/1,width=800,height=800,appearanceId=1,version=1485256808/marshmello-face-t-shirts-men-s-t-shirt.jpg">
-            <h2 class="full-name">Bill Fields</h2>
-            <span class="user-name">@MrFields</span>
-          </header>
-          <p class="tweetmsg">Little tweet here</p>
-          <footer>
-            <span class="time-stamp">10 days ago </span>
-            <div class= "icons">
-              <span class="heart"> H </span>
-              <span class="flag">F </span>
-              <span class="retweet">R </span>
-            </div>
-          </footer>
-        </article>
-            </div>
-             <div class="tweets">
-        <article class="tweet">
-          <header>
-            <img class="avatar" src="https://assets.monstercat.com/essentials/logos/monstercat_logo_square_small_white.png">
-            <h2 class="full-name">Bill Fields</h2>
-            <span class="user-name">@MrFields</span>
-          </header>
-          <p class="tweetmsg">Little tweet here</p>
-          <footer>
-            <span class="time-stamp">10 days ago </span>
-            <div class= "icons">
-              <span class="heart"> H </span>
-              <span class="flag">F </span>
-              <span class="retweet">R </span>
-            </div>
-          </footer>
-        </article>
-            </div>
-          </footer>
-        </article>
-        <div class="tweets">
-        <article class="tweet">
-          <header>
-            <img class="avatar" src="https://image.spreadshirtmedia.com/image-server/v1/compositions/1011162160/views/1,width=800,height=800,appearanceId=1,version=1485256808/marshmello-face-t-shirts-men-s-t-shirt.jpg">
-            <h2 class="full-name">Bill Fields</h2>
-            <span class="user-name">@MrFields</span>
-          </header>
-          <p class="tweetmsg">Little tweet here</p>
-          <footer>
-            <span class="time-stamp">10 days ago </span>
-            <div class= "icons">
-              <span class="heart"> H </span>
-              <span class="flag">F </span>
-              <span class="retweet">R </span>
-            </div>
-          </footer>
-        </article>
-            </div>
-      </div>
+      <section id="other-tweets">
+      </section>
     </main>
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <!-- Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>

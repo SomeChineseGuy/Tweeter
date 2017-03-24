@@ -9,9 +9,6 @@ $('textarea').keyup(function(){
     if (length < 0){
        $('.counter').css('color', 'red');
    }
-   else{
-       next();
-   }
 });
 
 });  

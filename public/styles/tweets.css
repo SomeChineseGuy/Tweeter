@@ -1,9 +1,17 @@
-.tweets {
+.message {
    padding: 0px;
    margin-top: 40px;
 }
+/*
+.tweets {
+   padding: 0px;
+   margin-top: 40px;
+}*/
 
-.tweet {
+
+.tweeting {
+   padding: 0px;
+   margin-top: 40px;
    background: white;
    border-radius: 10px;
    border: 1px #aaa solid;
@@ -11,7 +19,7 @@
    transition: .5s all ease-in-out;
 }
 
-.tweet:hover {
+.tweeting:hover {
    opacity: 1;
    transition: .5s all ease-in-out;
 }
@@ -25,32 +33,32 @@ article header {
    padding: 10px;
 }
 
-.tweet .avatar {
+.tweeting .avatar {
    width: 60px;
    height: 60px;
    float: left;
    border-radius: 10px;
 }
 
-.tweet .user-name {
+.tweeting .user-name {
    float: right;
    font-size: 1em;
    font-weight: lighter;
    color: grey;
 }
 
-.tweet .full-name {
+.tweeting .full-name {
    margin-bottom: 0px;
    margin-top: 0px;
    padding-bottom: 20px;
    padding-left: 75px;
 }
 
-.tweet .tweetmsg {
+.tweeting .tweetmsg {
    padding: 10px;
 }
 
-.tweet footer {
+.tweeting footer {
    background: white;
    border-top: 1px rgba(170, 170, 170, 0.29) solid;
    padding: 15px 10px;
@@ -59,13 +67,20 @@ article header {
    border-bottom-right-radius: 10px;
 }
 
-.tweet footer .icons {
+.tweeting footer .icons {
    float: right;
    padding: 15px 10px;
    opacity: 0;
    transition: .5s all ease-in-out;
 }
 
-.tweet:hover footer .icons {
+.tweeting:hover footer .icons {
     opacity: 1;
+}
+
+.heart {
+    
+
+
+
 }
