@@ -10,7 +10,7 @@ function createTweetElement(tweetData) {
     const $tweetMsg = $("<p class='tweetmsg'>").text(tweetData.content.text);
     const $footer = $("<footer>");
     const $timeStamp = $("<span class='time-stamp'>" + tweetData.created_at + "</span>");
-    const $icons = $("<div class='icons'>");
+    const $icons = $("<div class='icons'>");  
     const $heartIcon = $("<span class='heart'>");
     const $flagIcon = $("<span class='flag'>");
     const $retweetIcon = $("<span class='retweet'>");

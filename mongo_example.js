@@ -9,8 +9,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     throw err;
   }
 
-  // We have a connection to the "tweeter" db, starting here.
-  console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
   // ==> Refactored and wrapped as new, tweet-specific function:
 
