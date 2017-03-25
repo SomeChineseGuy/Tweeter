@@ -22,3 +22,17 @@
   font-size: 3em;
 
 }
+
+nav input {
+  float: right;
+  height: 60px;
+  padding: 0em 1em;
+  margin-top: 10px;
+  font-size: 25px;
+  background-color: #e7fdff;
+  border-radius: 5px;
+}
+
+nav input {
+  background-color: white;
+}

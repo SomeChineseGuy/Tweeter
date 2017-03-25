@@ -2,12 +2,6 @@
    padding: 0px;
    margin-top: 40px;
 }
-/*
-.tweets {
-   padding: 0px;
-   margin-top: 40px;
-}*/
-
 
 .tweeting {
    padding: 0px;
@@ -22,6 +16,11 @@
 .tweeting:hover {
    opacity: 1;
    transition: .5s all ease-in-out;
+}
+
+article{
+    width: 450px;
+    margin: auto;
 }
 
 article header {
@@ -41,13 +40,15 @@ article header {
 }
 
 .tweeting .user-name {
-   float: right;
-   font-size: 1em;
-   font-weight: lighter;
-   color: grey;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1em;
+    font-weight: lighter;
+    color: grey;
+    margin: auto
 }
 
-.tweeting .full-name {
+.tweeting h2 {
    margin-bottom: 0px;
    margin-top: 0px;
    padding-bottom: 20px;
@@ -67,20 +68,21 @@ article header {
    border-bottom-right-radius: 10px;
 }
 
-.tweeting footer .icons {
+.tweeting .icons {
    float: right;
-   padding: 15px 10px;
    opacity: 0;
    transition: .5s all ease-in-out;
+   
 }
 
 .tweeting:hover footer .icons {
     opacity: 1;
 }
 
-.heart {
-    
+#heart {
+    padding: 0 8px;
+}
 
-
-
+#id {
+    padding: 0 8px;
 }

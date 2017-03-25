@@ -9,11 +9,11 @@ function createTweetElement(tweetData) {
     const $username= $("<span class='user-name'>" + tweetData.user.handle + "</span>");
     const $tweetMsg = $("<p class='tweetmsg'>").text(tweetData.content.text);
     const $footer = $("<footer>");
-    const $timeStamp = $("<span class='time-stamp'>" + tweetData.created_at + "</span>");
+    const $timeStamp = $("<span class='time-stamp'>" + timeSince(tweetData.created_at) + "ago" + "</span>");
     const $icons = $("<div class='icons'>");  
-    const $heartIcon = $("<span class='heart'>");
-    const $flagIcon = $("<span class='flag'>");
-    const $retweetIcon = $("<span class='retweet'>");
+    const $heartIcon = $("<i id='heart' class='fa fa-heart' aria-hidden='true'></i>");
+    const $flagIcon = $("<i class='fa fa-flag' aria-hidden='true'></i>");
+    const $retweetIcon = $("<i id='id' class='fa fa-retweet' aria-hidden='true'></i>");
 
     $header.append($img, $fullName, $username);
     $icons.append($heartIcon, $flagIcon, $retweetIcon);
@@ -47,6 +47,36 @@ function loadTweets (){
     method: "GET",
   }).done(renderTweets);
 }
+
+function timeSince(date) {
+  var seconds = Math.floor((new Date() - date) / 1000);
+  var interval = Math.floor(seconds / 31536000);
+  if (interval > 1) {
+      return interval + " years";
+  }
+  interval = Math.floor(seconds / 2592000);
+  if (interval > 1) {
+      return interval + " months";
+  }
+  interval = Math.floor(seconds / 86400);
+  if (interval > 1) {
+      return interval + " days";
+  }
+  interval = Math.floor(seconds / 3600);
+  if (interval > 1) {
+      return interval + " hours";
+  }
+  interval = Math.floor(seconds / 60);
+  if (interval > 1) {
+      return interval + " minutes";
+  }
+  return Math.floor(seconds) + " seconds";
+ };
+
+$("nav input").on("click", function(event) { 
+  console.log("Click Event", event)
+  $(".new-tweet").toggle();
+});
 
 
 $(".new-tweet form").on("submit", function(e){

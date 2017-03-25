@@ -1,7 +1,8 @@
 .new-tweet {
     padding: 0 2em;
     background-color: #D5D5D5;
-    width: 100%;
+    width: 450px;
+    margin: auto
 }
 
 .new-tweet > h2 {
